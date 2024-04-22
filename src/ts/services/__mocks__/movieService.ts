@@ -1,6 +1,6 @@
 import { IMovie } from "../../models/Movie";
 
-const movies: IMovie[] = [
+export const movies: IMovie[] = [
   {
     Title: "En Harry Potter film",
     Year: "2011",
