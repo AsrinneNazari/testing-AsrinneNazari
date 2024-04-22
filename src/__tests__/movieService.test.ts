@@ -12,19 +12,16 @@ const mockResponse = {
   }
 }
 
-
 describe("testing getData", () => {
-  test("it should work", async () => {
+  test("it should give a resolve", async () => {
     axios.get = jest.fn().mockResolvedValue(mockResponse);
     const movies = await getData("");
     expect(movies).toHaveLength(3);
   });
 
-  test("it should work", async () => {
+  test("it should give a reject", async () => {
     axios.get = jest.fn().mockRejectedValue(mockResponse);
     const movies = await getData("");
     expect(movies).toHaveLength(0);
   });
 });
-
-
