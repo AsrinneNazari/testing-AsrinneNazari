@@ -34,14 +34,14 @@ describe("Testing handleSubmit", () => {
       </div> 
       `; 
     
-    mockedgetData.mockResolvedValueOnce([]); //jag behöver hjälp här!
+    //mockedgetData.mockResolvedValueOnce([]); //jag behöver hjälp här!
     
     await handleSubmit(); 
 
-    const movieContainer = document.getElementById("movie-container");
-    expect(movieContainer).toBeDefined(); 
+    expect(mockedcreateHtml).toHaveBeenCalled(); //fel här! om tar bort så funkar koden???
+    const moviesinContainer = document.getElementsByClassName("movie");
+    expect(moviesinContainer).toHaveLength(1); 
     
-    expect(mockedcreateHtml).toHaveBeenCalled();
     expect(mockeddisplayNoResult).toHaveBeenCalled();
     expect(mockedgetData).toHaveBeenCalled();
     })
