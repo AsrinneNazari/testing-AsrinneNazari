@@ -2,8 +2,6 @@ import axios from "axios";
 import { getData } from "../ts/services/movieService";
 import { movies } from "../ts/services/__mocks__/movieService";
 
-//jest.mock("./../services/movieService.ts");
-
 jest.mock("axios");
 
 const mockResponse = {

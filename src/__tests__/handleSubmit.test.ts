@@ -33,8 +33,10 @@ describe("Testing handleSubmit", () => {
       <div id="movie-container"></div>
       </div> 
       `; 
-    await handleSubmit(); 
+    
     mockedgetData.mockResolvedValueOnce([]); //jag behöver hjälp här!
+    
+    await handleSubmit(); 
 
     const movieContainer = document.getElementById("movie-container");
     expect(movieContainer).toBeDefined(); 
