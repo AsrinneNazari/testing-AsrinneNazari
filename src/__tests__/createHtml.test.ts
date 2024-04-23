@@ -1,5 +1,5 @@
 import { createHtml } from "../ts/createHtml";
-import { IMovie } from "../ts/models/Movie";
+import { movies } from "../ts/services/__mocks__/movieService";
 
 describe("createHtml testing", () =>{
     test("just testing", ()=>{
@@ -13,11 +13,10 @@ describe("createHtml testing", () =>{
       </div> 
       `;   
 
-      const movie: IMovie[] = [];
-      const movieContainer = document.createElement("div");
-      movieContainer.innerHTML = ""
+      const movieContainer = document.getElementById("movie-container") as HTMLDivElement;
+      createHtml(movies, movieContainer)
 
-      createHtml(movie, movieContainer);
-      expect().toContain();
+      const themovie = movieContainer.querySelectorAll(".movie");
+      expect(themovie.length).toBe(3);
     })
 }) 
