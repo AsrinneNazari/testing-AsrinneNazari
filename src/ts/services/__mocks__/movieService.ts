@@ -11,7 +11,7 @@ export const movies: IMovie[] = [
   },
   {
     Title: "Dune: Part ten",
-    Year: "2034",
+    Year: "2035",
     imdbID: "tt15239678",
     Type: "movie",
     Poster:
@@ -27,7 +27,9 @@ export const movies: IMovie[] = [
   },
 ];
 
-export const getMovies = async (): Promise<IMovie[]> => {
+export const getData = async (searchText: string): Promise<IMovie[]> => {
+  if (searchText) {
+  }
   return new Promise((resolve) => {
     resolve(movies);
   });
