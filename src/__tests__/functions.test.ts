@@ -8,9 +8,21 @@ const sortMovie: IMovie[] = [
 {Title: 'Harry Potter and the Deathly Hallows: Part 2', Year: '2011', imdbID: 'tt1201607', Type: 'movie', Poster: 'https://m.media-amazon.com/images/M/MV5BMGVmMWNiMD…2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg'},
 {Title: 'Dune: Part Two', Year: '2024', imdbID: 'tt15239678', Type: 'movie', Poster: 'https://m.media-amazon.com/images/M/MV5BN2QyZGU4ZD…mY5YzAwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg'}
 ]
-     
-movieSort(sortMovie);
+const booleanMovie:boolean = true    
+movieSort(sortMovie, booleanMovie);
         
 expect(sortMovie[0].Title).toBe('Dune: Part Two');
     })
+
+    test("It should sort the true/false", () =>{
+        
+        const sortMovie: IMovie[] = [
+        {Title: 'Harry Potter and the Deathly Hallows: Part 2', Year: '2011', imdbID: 'tt1201607', Type: 'movie', Poster: 'https://m.media-amazon.com/images/M/MV5BMGVmMWNiMD…2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg'},
+        {Title: 'Dune: Part Two', Year: '2024', imdbID: 'tt15239678', Type: 'movie', Poster: 'https://m.media-amazon.com/images/M/MV5BN2QyZGU4ZD…mY5YzAwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg'}
+        ]
+        const booleanMovie:boolean = false    
+        movieSort(sortMovie, booleanMovie);
+                
+        expect(sortMovie[0].Title).toBe('Harry Potter and the Deathly Hallows: Part 2');
+            })    
 })
