@@ -5,4 +5,3 @@ export const displayNoResult = (container: HTMLDivElement) => {
   
     container.appendChild(noMessage);
   };
-  
