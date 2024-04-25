@@ -2,7 +2,7 @@ import { createHtml } from "../ts/createHtml";
 import { movies } from "../ts/services/__mocks__/movieService";
 
 describe("createHtml testing", () =>{
-    test("testing createHtml", ()=>{
+    test("It should call createHtml function", ()=>{
         document.body.innerHTML = `
         <div id="app">
         <form id="searchForm">
